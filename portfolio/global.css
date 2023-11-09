@@ -1,0 +1,250 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+:root {
+    /* --color-bg: #000000;
+    --color-fg: #ffffff; */
+
+    --color-primary-light: rgb(245, 245, 220);
+    --color-primary: rgb(193, 193, 114);
+    --color-primary-dark: darkolivegreen;
+    --color-dark-text: rgb(46, 63, 17);
+    --color-new: rgb(154, 148, 143);
+    --color-new-2: rgb(152, 171, 121);
+
+    /* USE THESE COLORS */
+    --color-bg: var(--color-primary);
+    --color-card: var(--color-primary-light);
+    --color-text: var(--color-dark-text);
+
+    --color-button: var(--color-primary-dark);
+    --color-button-text: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: var(--color-primary-dark);
+        --color-card: var(--color-dark-text);
+        --color-text: white;
+
+        --color-button: var(--color-primary-light);
+        --color-button-text: var(--color-primary-dark);
+    }
+
+    .contact-box{
+        background: var(--color-dark-text);
+    }
+
+    .contact-right{
+        background: var(--color-primary);
+    }
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.container{
+    max-width: 60rem;
+    margin-inline: auto;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.project {
+    background-color: var(--color-card);
+}
+
+img{
+    /* width: 100%; */
+    height: auto;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+
+nav a:link, nav a:visited{
+    color: var(--color-text);
+    text-decoration: none;
+    /* background-color: burlywood; */
+    padding: .5rem;
+    text-align: center;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+/* header {
+    position: fixed;
+    /* display: flex; */
+    /* width: 100%; */
+    /* justify-content: space-between; */
+    /* padding: 13px 5px; */
+/* } */ 
+
+nav {
+    padding: .5rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button {
+    background-color: var(--color-button);
+    border-radius: 0.5rem;
+    text-align: center;
+    margin: auto;
+    color: var(--color-button-text);
+    padding: 1rem;
+    height: 150px;
+    width: 400px;
+    text-decoration: none;
+    box-shadow: inset 0 0 10px beige;
+
+}
+
+.project {
+  /* background-image: url(brissa.JPG); */
+  background-size: cover;
+  background-position: center;
+  /* height: 300px; */
+  /* background-color: var(--color-bg); */
+
+  display: flex;
+  /* flex-direction: column; */
+  gap: 1rem;
+  border-radius: 25px;
+  margin-inline: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+footer{
+   color: var(--color-text);
+   padding: .5rem;
+   text-align: center;
+}
+
+.here{
+    width: 80%;
+    margin: 50px auto;
+    max-width: 60rem;
+    text-align: center;
+    margin: auto;
+    
+}
+
+.contact-box{
+    background: var(--color-new);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+@media (min-width: 900px){
+    .contact-box {
+        flex-direction: row;
+    }
+    .contact-right{
+        flex-direction: row;
+    }
+    .contact-left{
+        flex-direction: row;
+    }
+}
+
+a:link, :visited{
+    color: black;
+}
+
+a:hover{
+    color: var(--color-primary);
+}
+
+.contact-left{
+    /* tells an element to stick to an ideal size  */
+    flex-basis: 60%;
+    padding: 40px 60px;
+}
+
+.contact-right{
+    flex-basis: 60%;
+    padding: 40px 60px;
+   background: var( --color-new-2);
+}
+
+.here p {
+    margin-bottom: 40px;
+}
+
+.input-row{
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-row, .input-group {
+    flex-basis: 45%;
+
+}
+
+input{
+    width: auto;
+    border: none;
+    border-bottom: 1px solid var(--color-text);
+    padding-bottom: 5px;
+}
+
+textarea{
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+label{
+    margin-bottom: 6px;
+    display: block;
+}
+
+tr td:first-child{
+    padding-right: 20px;
+}
+
+tr td{
+    padding-top: 20px;
+}
+
+.project2{
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-card);
+
+  display: flex;
+  flex-direction: row; 
+
+  gap: 1rem;
+  border-radius: 25px;
+  margin-inline: auto;
+  box-shadow: 0 4px 20px rgba(0, 0.0, 0.5);
+}
+
+/* DARK MODE */
+
+/* @media screen and (prefers-color-scheme: dark ) {
+    body{
+        color: #fff;
+    }
+    .project {
+        background-color: rgb(79, 106, 18);
+    }
+} */
